@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/cmake-build-debug")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

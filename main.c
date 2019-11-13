@@ -340,9 +340,8 @@ int main(){
 
     FILE *fp, *fpout;
 
-    if ((  fp=fopen("/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/input.txt","r"))==NULL){printf("Error opening input file");exit(1);}
-    if ((  fpout=fopen("/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/output.txt","w"))==NULL){printf("Error opening output file");exit(1);}
-
+    if ((  fp=fopen("input.txt","r"))==NULL){printf("Error opening input file");exit(1);}
+    fpout = fopen("output.txt","w+");
     int j;
     for(j=0;j<inputs;j++)
     {

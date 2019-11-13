@@ -47,7 +47,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/cmake-build-debug"
+CMAKE_BINARY_DIR = "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ preinstall:
 CMakeFiles/FormulaParser.dir/all:
 	$(MAKE) -f CMakeFiles/FormulaParser.dir/build.make CMakeFiles/FormulaParser.dir/depend
 	$(MAKE) -f CMakeFiles/FormulaParser.dir/build.make CMakeFiles/FormulaParser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target FormulaParser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/CMakeFiles" --progress-num=1,2 "Built target FormulaParser"
 .PHONY : CMakeFiles/FormulaParser.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FormulaParser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/cmake-build-debug/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/CMakeFiles" 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/FormulaParser.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/CMakeFiles" 0
 .PHONY : CMakeFiles/FormulaParser.dir/rule
 
 # Convenience name for target.

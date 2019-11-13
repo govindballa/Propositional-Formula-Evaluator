@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/main.c" "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/cmake-build-debug/CMakeFiles/FormulaParser.dir/main.c.o"
+  "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/main.c" "/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/CMakeFiles/FormulaParser.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
