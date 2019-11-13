@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/govind/OneDrive - University College London/Documents/C/Logic And Databases/FormulaParser/main.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+

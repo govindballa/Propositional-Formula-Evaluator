@@ -1,0 +1,10 @@
+ is a negation.  
+-(p^q^r) is not a formula.  
+ is a binary,  
+ is a negation.  
+ is a negation.  
+ is a binary,  
+ is a negation.  
+ is a binary,  
+(p(^q)) is not a formula.  
+ is a binary,  
