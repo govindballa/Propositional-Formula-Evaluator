@@ -326,12 +326,23 @@ int *truthTable(char *string){
 }
 int satisfiable(char *string){
     char *string1;
+    int valid = 1;
+    int satisf = 0;
     string1 = malloc(strlen(string)+1);
     strcpy(string1, string);
 
     int *tt = truthTable(string1);
     for(int i = 0; i < 8; i++){
-        if(tt[i] == 1) return 1;
+        if(tt[i] == 1){
+            satisf = 1;
+        } else {
+            valid = 0;
+        }
+    }
+    if(satisf && valid){
+        return 2;
+    } else if(satisf){
+        return 1;
     }
     return 0;
 }
@@ -360,7 +371,11 @@ int main(){
         if (FormulaMain(&orig)!=0)
         {
             if (!satisfiable(orig2))  fprintf(fpout, "%s is not satisfiable.\n", orig2);
-            else fprintf(fpout, "%s is satisfiable.\n", orig2);
+            else if(satisfiable(orig2) == 2){
+                fprintf(fpout, "%s is satisfiable and valid.\n", orig2);
+            } else{
+                fprintf(fpout, "%s is satisfiable.\n", orig2);
+            }
         }
         else  fprintf(fpout, "I told you, %s is not a formula.\n", orig2);
     }
