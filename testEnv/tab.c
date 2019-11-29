@@ -66,6 +66,9 @@ int BinaryOperator(char *s[]){
     return 0;
 }
 int Proposition(char *s[]){
+    if(strlen(*s )!= 0){
+        return 0;
+    }
     if(match(s, "p") || match(s, "q") || match(s, "r")){
         return 1;
     }
@@ -326,12 +329,23 @@ int *truthTable(char *string){
 }
 int satisfiable(char *string){
     char *string1;
+    int valid = 1;
+    int satisf = 0;
     string1 = malloc(strlen(string)+1);
     strcpy(string1, string);
 
     int *tt = truthTable(string1);
     for(int i = 0; i < 8; i++){
-        if(tt[i] == 1) return 1;
+        if(tt[i] == 1){
+            satisf = 1;
+        } else {
+            valid = 0;
+        }
+    }
+    if(satisf && valid){
+        return 2;
+    } else if(satisf){
+        return 1;
     }
     return 0;
 }
@@ -351,16 +365,18 @@ int main(){
         char *orig2 = name;
         switch (FormulaMain(&name))
         {
-            case(0): fprintf(fpout, "%s is not a formula.  ", orig);break;
-            case(1): fprintf(fpout, "%s is a proposition.  ", orig);break;
-            case(2): fprintf(fpout, "%s is a negation.  ", orig);break;
-            case(3):fprintf(fpout, "%s is a binary. The first part is %s and the second part is %s.  ", orig, partone(orig), parttwo(orig));break;
+            case(0): fprintf(fpout, "%s is not a formula.  \n", orig);break;
+            case(1): fprintf(fpout, "%s is a proposition.  \n", orig);break;
+            case(2): fprintf(fpout, "%s is a negation.  \n", orig);break;
+            case(3):fprintf(fpout, "%s is a binary. The first part is %s and the second part is %s.  \n", orig, partone(orig), parttwo(orig));break;
             default:fprintf(fpout, "What the f***!  ");
         }
         if (FormulaMain(&orig)!=0)
         {
             if (!satisfiable(orig2))  fprintf(fpout, "%s is not satisfiable.\n", orig2);
-            else fprintf(fpout, "%s is satisfiable.\n", orig2);
+            else{
+                fprintf(fpout, "%s is satisfiable.\n", orig2);
+            }
         }
         else  fprintf(fpout, "I told you, %s is not a formula.\n", orig2);
     }

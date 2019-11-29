@@ -66,6 +66,9 @@ int BinaryOperator(char *s[]){
     return 0;
 }
 int Proposition(char *s[]){
+    if(strlen(*s )!= 0){
+        return 0;
+    }
     if(match(s, "p") || match(s, "q") || match(s, "r")){
         return 1;
     }
@@ -362,18 +365,16 @@ int main(){
         char *orig2 = name;
         switch (FormulaMain(&name))
         {
-            case(0): fprintf(fpout, "%s is not a formula.  ", orig);break;
-            case(1): fprintf(fpout, "%s is a proposition.  ", orig);break;
-            case(2): fprintf(fpout, "%s is a negation.  ", orig);break;
-            case(3):fprintf(fpout, "%s is a binary. The first part is %s and the second part is %s.  ", orig, partone(orig), parttwo(orig));break;
+            case(0): fprintf(fpout, "%s is not a formula.  \n", orig);break;
+            case(1): fprintf(fpout, "%s is a proposition.  \n", orig);break;
+            case(2): fprintf(fpout, "%s is a negation.  \n", orig);break;
+            case(3):fprintf(fpout, "%s is a binary. The first part is %s and the second part is %s.  \n", orig, partone(orig), parttwo(orig));break;
             default:fprintf(fpout, "What the f***!  ");
         }
         if (FormulaMain(&orig)!=0)
         {
             if (!satisfiable(orig2))  fprintf(fpout, "%s is not satisfiable.\n", orig2);
-            else if(satisfiable(orig2) == 2){
-                fprintf(fpout, "%s is satisfiable and valid.\n", orig2);
-            } else{
+            else{
                 fprintf(fpout, "%s is satisfiable.\n", orig2);
             }
         }
